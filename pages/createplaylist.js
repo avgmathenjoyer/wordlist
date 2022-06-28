@@ -146,25 +146,13 @@ export default function CreatePlaylist() {
         let flag = false; //flag for breaking element loop
 
         const trackResponse = await fetch(
-          `https://api.spotify.com/v1/search?q=${element}&type=track`,
-          {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-          }
+          `/api/${element}?token=${accessToken}`
         ).then(async (res) => {
           const r = await res.json();
-          const tracks = r.tracks.items;
+          const tracks = r.songs;
           for (const track of tracks) {
             if (track.name.toLowerCase() === element.toLowerCase()) {
-              return {
-                name: track.name,
-                id: track.id,
-                artists: track.artists.map((artist) => artist.name),
-                image: track.album.images[0].url,
-              };
+              return track;
             }
           }
           flag = true; //flag is used to break the element loop if one of the elements cant be found
