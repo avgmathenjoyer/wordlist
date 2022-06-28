@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "display": ["Proxima Nova", ...defaultTheme.fontFamily.sans]
-      }
-    },
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
+    }
   },
   plugins: [],
 }

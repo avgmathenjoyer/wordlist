@@ -8,10 +8,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #ffffff;
-    background-image: url("/bgtile.png");
-    background-repeat: repeat;
-    background-size: 150px 150px;
 }
 
 a {

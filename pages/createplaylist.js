@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -56,7 +57,7 @@ function Playlist({ combination, sentence, accessToken }) {
   };
 
   return (
-    <div className="flex flex-col items-center w-1/4 p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800 h-4/6">
+    <div className="flex flex-col items-center w-1/4 min-h-[66vh] p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
       <div className="mb-auto">
         <h1 className="w-full text-5xl">{sentence}</h1>
         {combination.map((track) => (
@@ -184,16 +185,20 @@ export default function CreatePlaylist() {
     }
   }
   return (
-    <div className="flex items-center justify-center w-screen h-screen text-center font-display">
+    <div className="flex items-center justify-center min-h-screen font-sans text-center min-w-screen font-display bg-gradient-to-r from-zinc-800 to-slate-900">
+      <Head>
+        <title>Create a Playlist</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div
-        className={`m-4 w-11/12 h-5/6 shadow-2xl flex rounded flex-col items-center bg-slate-50 ${
+        className={`m-4 w-11/12 min-h-[90vh] h-5/6 shadow-2xl flex rounded flex-col items-center ${
           searchResults ? "" : "py-[25vh]"
         }`}
       >
-        <h1 className="my-4 text-3xl">Type a sentence</h1>
+        <h1 className="my-4 text-3xl text-white">Type a sentence</h1>
         <div className="w-11/12">
           <input
-            className="w-2/3 h-16 my-auto text-5xl border-4 border-black rounded shadow-lg"
+            className="w-2/3 h-16 p-1 my-auto text-5xl text-white border-4 rounded shadow-lg bg-slate-900"
             value={sentence}
             onInput={(e) => setSentence(e.target.value)}
           />
