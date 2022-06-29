@@ -64,7 +64,7 @@ function Playlist({ combination, sentence, accessToken }) {
       {done ? (
         <div className="w-full h-[66vh] bg-slate-200 my-5 rounded-lg shadow-2xl m-auto flex flex-col align-center justify-center">
           <h1 className="text-4xl">Playlist exported</h1>
-          <svg class="w-40 h-40 block mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <svg className="block w-40 h-40 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
         </div>
       ) : (
         <div className="flex flex-col items-center p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
@@ -236,7 +236,7 @@ export default function CreatePlaylist() {
         </div>
         {isError ? (
           <h1 className="text-5xl text-white font-display my-7">
-            Sorry, we couldn't build a playlist from a supplied sentence. Error message 
+            Sorry, we could not build a playlist from a supplied sentence. Error message 
             <code>
               {errorMessage === "" ? "The request took too much time" : errorMessage}
             </code>
@@ -251,13 +251,13 @@ export default function CreatePlaylist() {
           <div className="flex flex-col items-center w-1/4 min-h-[66vh] p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
             <h1 className="w-full text-5xl">{sentence}</h1>
             {[0, 1, 2].map((_val) => (
-              <div class="animate-pulse flex space-x-4 w-2/3 my-7">
-                <div class="rounded-md bg-slate-200 h-20 w-20"></div>
-                <div class="flex-1 space-y-6 py-1">
-                  <div class="h-4 bg-slate-200 rounded"></div>
-                  <div class="space-y-3">
-                    <div class="grid grid-cols-3 gap-4">
-                      <div class="h-4 bg-slate-200 rounded col-span-2"></div>
+              <div className="flex w-2/3 space-x-4 animate-pulse my-7">
+                <div className="w-20 h-20 rounded-md bg-slate-200"></div>
+                <div className="flex-1 py-1 space-y-6">
+                  <div className="h-4 rounded bg-slate-200"></div>
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="h-4 col-span-2 rounded bg-slate-200"></div>
                     </div>
                   </div>
                 </div>
