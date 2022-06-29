@@ -250,8 +250,8 @@ export default function CreatePlaylist() {
         ) : loading ? (
           <div className="flex flex-col items-center w-1/4 min-h-[66vh] p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
             <h1 className="w-full text-5xl">{sentence}</h1>
-            {[0, 1, 2].map((_val) => (
-              <div className="flex w-2/3 space-x-4 animate-pulse my-7">
+            {[0, 1, 2].map((val) => (
+              <div key={val} className="flex w-2/3 space-x-4 animate-pulse my-7">
                 <div className="w-20 h-20 rounded-md bg-slate-200"></div>
                 <div className="flex-1 py-1 space-y-6">
                   <div className="h-4 rounded bg-slate-200"></div>
