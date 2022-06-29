@@ -2,7 +2,7 @@ export default function handler(req, res) {
   const client_id = encodeURIComponent(process.env.CLIENT_ID);
   const scope = encodeURIComponent("playlist-modify-private");
   const redirect_uri = encodeURIComponent(
-    "http://localhost:3000/createplaylist"
+    process.env.REDIRECT_URI
   );
   const state = encodeURIComponent(123);
   res.redirect(
