@@ -60,14 +60,14 @@ function Playlist({ combination, sentence, accessToken }) {
   };
 
   return (
-    <div className="w-1/4 min-h-[66vh]">
+    <div className="w-2/3 min-h-[66vh] xl:w-1/4">
       {done ? (
         <div className="w-full h-[66vh] bg-slate-200 my-5 rounded-lg shadow-2xl m-auto flex flex-col align-center justify-center">
           <h1 className="text-4xl">Playlist exported</h1>
           <svg className="block w-40 h-40 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
         </div>
       ) : (
-        <div className="flex flex-col items-center p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
+        <div className="flex flex-col items-center h-[66vh] p-2 my-5 text-white rounded-lg shadow-2xl bg-gradient-to-b from-neutral-800 to-green-800">
           <div className="mb-auto">
             <h1 className="w-full text-5xl">{sentence}</h1>
             {combination.map((track) => (
@@ -210,7 +210,7 @@ export default function CreatePlaylist() {
     }
   }
   return (
-    <div className="flex items-center justify-center min-h-screen font-sans text-center min-w-screen font-display bg-gradient-to-r from-zinc-800 to-slate-900">
+    <div className="flex flex-col items-center justify-center min-h-screen font-sans text-center min-w-screen font-display bg-gradient-to-r from-zinc-800 to-slate-900">
       <Head>
         <title>Create a Playlist</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -267,6 +267,9 @@ export default function CreatePlaylist() {
         ) : (
           <div></div>
         )}
+      </div>
+      <div className="text-2xl text-white">
+        The data used by this app is from <img className="inline w-52" src="/Spotify_Logo_RGB_Green.png"/>
       </div>
     </div>
   );
