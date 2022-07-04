@@ -1,6 +1,11 @@
 This is a React app which uses Spotify API to create playlist from a given sentence.
 
-The app is currently in developer mode and therefore can't be used by users other than me or explicitly added by me.
+~~The app is currently in developer mode and therefore can't be used by users other than me or explicitly added by me.~~
+
+App has been approved for quota extension. It can be used by everyone with a Spotify account!
+
+### Feel free to use it!
+
 
 # App usage
 
